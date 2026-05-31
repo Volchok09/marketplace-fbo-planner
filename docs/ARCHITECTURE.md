@@ -7,6 +7,42 @@ Marketplace FBO Planner is split into four layers:
 3. Operator interface.
 4. AI-assisted review and maintenance.
 
+## System Map
+
+```mermaid
+flowchart TB
+    subgraph Sources
+      A["Marketplace exports"]
+      B["Seller APIs"]
+      C["Google Sheets"]
+      D["Manual weekly notes"]
+    end
+
+    subgraph Planner
+      E["Adapter layer"]
+      F["Normalized demand signals"]
+      G["Planning core"]
+      H["Box and production rules"]
+    end
+
+    subgraph Outputs
+      I["Shipment plan JSON"]
+      J["Spreadsheet-ready tables"]
+      K["Warnings and shortfalls"]
+    end
+
+    A --> E
+    B --> E
+    C --> E
+    D --> H
+    E --> F
+    F --> G
+    H --> G
+    G --> I
+    G --> J
+    G --> K
+```
+
 ## 1. Data Adapters
 
 Adapters convert marketplace-specific exports or API responses into generic demand signals:
@@ -82,4 +118,3 @@ The intended AI workflow:
 5. Convert repeated corrections into stable rules.
 
 This keeps the deterministic core small while still supporting real-world messy operations.
-
