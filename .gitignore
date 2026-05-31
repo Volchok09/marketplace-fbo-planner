@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+dist/
+build/
+*.egg-info/
+.env
+*.xlsx
+*.xls
+*.csv
+!examples/*.sample.csv
+secrets/
+docs/PITCH_RU.md
+docs/OPENAI_CODEX_FOR_OSS_APPLICATION.md

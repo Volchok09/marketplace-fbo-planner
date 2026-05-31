@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketplace-fbo-planner"
+version = "0.1.0"
+description = "Open-source FBO replenishment planning toolkit for marketplace sellers."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Vladislav Dzyubenko" }
+]
+keywords = ["marketplace", "fbo", "fba", "replenishment", "inventory", "wildberries", "ozon"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Office/Business",
+]
+dependencies = []
+
+[project.scripts]
+fbo-planner = "fbo_planner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

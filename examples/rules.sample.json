@@ -1,0 +1,66 @@
+{
+  "target_days": 14,
+  "max_boxes": 8,
+  "products": [
+    {
+      "sku": "ARM-RIO-4",
+      "model": "Compact sedan armrest",
+      "pack_class": "large",
+      "reserve_units": 6,
+      "available_units": 44
+    },
+    {
+      "sku": "ARM-SOLARIS",
+      "model": "Small sedan armrest",
+      "pack_class": "large",
+      "reserve_units": 5,
+      "available_units": 24
+    },
+    {
+      "sku": "ARM-GRANTA",
+      "model": "Economy sedan armrest",
+      "pack_class": "small",
+      "reserve_units": 5,
+      "available_units": 32
+    },
+    {
+      "sku": "ARM-LOGAN",
+      "model": "Tall console armrest",
+      "pack_class": "extra",
+      "reserve_units": 4,
+      "available_units": 22
+    }
+  ],
+  "box_rules": [
+    {
+      "name": "large-mix",
+      "pack_classes": ["large", "small"],
+      "max_units": 12,
+      "max_non_extra_units": 10,
+      "extra_pack_class": "extra",
+      "max_extra_units": 2
+    },
+    {
+      "name": "small-box",
+      "pack_classes": ["small"],
+      "max_units": 12
+    },
+    {
+      "name": "extra-box",
+      "pack_classes": ["extra"],
+      "max_units": 14
+    }
+  ],
+  "warehouse_rules": {
+    "max_boxes_per_warehouse_without_pallet": 4,
+    "prefer_local_delivery_routes": true
+  },
+  "marketplace_status": {
+    "wildberries": "prototype",
+    "ozon": "prototype",
+    "amazon": "roadmap",
+    "ebay": "roadmap",
+    "aliexpress": "roadmap"
+  }
+}
+

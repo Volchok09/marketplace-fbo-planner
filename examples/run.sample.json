@@ -1,0 +1,65 @@
+{
+  "target_days": 14,
+  "max_boxes": 12,
+  "weekly_context": {
+    "logistics_window": "Tuesday-Thursday",
+    "operator_note": "Prefer geographic coverage over single-warehouse bulk replenishment."
+  },
+  "demand_signals": [
+    {
+      "marketplace": "Wildberries",
+      "warehouse": "Central DC",
+      "sku": "ARM-RIO-4",
+      "product_name": "Armrest for compact sedan",
+      "daily_sales_units": 1.8,
+      "fbo_stock_units": 2,
+      "inbound_units": 0,
+      "recommended_units": 24,
+      "days_without_stock": 3
+    },
+    {
+      "marketplace": "Wildberries",
+      "warehouse": "Volga DC",
+      "sku": "ARM-GRANTA",
+      "product_name": "Armrest for economy sedan",
+      "daily_sales_units": 0.9,
+      "fbo_stock_units": 0,
+      "inbound_units": 4,
+      "recommended_units": 12,
+      "days_without_stock": 2
+    },
+    {
+      "marketplace": "Ozon",
+      "warehouse": "South Cluster",
+      "sku": "ARM-RIO-4",
+      "product_name": "Armrest for compact sedan",
+      "daily_sales_units": 1.2,
+      "fbo_stock_units": 1,
+      "inbound_units": 0,
+      "recommended_units": 15,
+      "days_without_stock": 1
+    },
+    {
+      "marketplace": "Ozon",
+      "warehouse": "South Cluster",
+      "sku": "ARM-LOGAN",
+      "product_name": "Armrest for tall console cars",
+      "daily_sales_units": 0.4,
+      "fbo_stock_units": 0,
+      "inbound_units": 0,
+      "recommended_units": 7,
+      "days_without_stock": 0
+    },
+    {
+      "marketplace": "Ozon",
+      "warehouse": "Siberia Cluster",
+      "sku": "ARM-SOLARIS",
+      "product_name": "Armrest for small sedan",
+      "daily_sales_units": 0.7,
+      "fbo_stock_units": 1,
+      "inbound_units": 0,
+      "recommended_units": 9,
+      "days_without_stock": 2
+    }
+  ]
+}
