@@ -29,6 +29,19 @@ class PlannerTest(unittest.TestCase):
         for box in plan.boxes:
             self.assertLessEqual(box.quantity, max_by_rule[box.rule_name])
 
+    def test_records_production_shortfall_when_available_units_are_not_enough(self) -> None:
+        rules = load_json("rules.sample.json")
+        run = load_json("run.sample.json")
+        for product in rules["products"]:
+            if product["sku"] == "ARM-RIO-4":
+                product["available_units"] = 8
+                product["reserve_units"] = 2
+
+        plan = build_plan(rules, run)
+
+        self.assertIn("ARM-RIO-4", plan.production_shortfalls)
+        self.assertGreater(plan.production_shortfalls["ARM-RIO-4"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()
